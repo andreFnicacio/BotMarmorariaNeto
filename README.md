@@ -36,8 +36,8 @@ npm install express
 1. Clone este repositório para sua máquina local:
 
 ```bash
-git clone <repository_url>
-cd Bot-Marmoraria
+git [clone <repository_url>](https://github.com/andreFnicacio/BotMarmorariaNeto.git)
+cd BotMarmorariaNeto
 ```
 
 2. Uma vez dentro da pasta do projeto, instale as bibliotecas e componentes necessários executando:
