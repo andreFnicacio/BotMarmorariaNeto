@@ -58,14 +58,19 @@ Aqui está uma visão geral básica de como o script funciona:
 // src/shared/processMessage.js
 
 function processMessage(message) {
-  // Adicione sua lógica aqui para processar a mensagem recebida e formular uma resposta.
-  if (message === 'Olá') {
-    return 'Olá! Como posso ajudar hoje?';
-  } else if (message === 'Quanto custa o mármore?') {
-    return 'Os preços do mármore variam dependendo do tipo e da quantidade. Forneça mais detalhes para um orçamento preciso.';
-  } else {
-    return 'Desculpe, não consegui entender. Por favor, pergunte novamente.';
-  }
+   if(textUser.includes("Oi")){
+        //SAUDAR
+        var model = whatsappModel.MessageText("HOlá, tudo bem ?!. 👋", number);
+        models.push(model);
+        var modelList = whatsappModel.MessageList(number);
+        models.push(modelList);
+    }
+    else if(textUser.includes("Obrigado")){
+        // agradecimiento
+        var model = whatsappModel.MessageText("Obrigado voce por entrar em contato! 😉😎", number);
+        models.push(model);       
+
+    }
 }
 
 module.exports = processMessage;
